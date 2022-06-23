@@ -59,6 +59,27 @@ Home
       {% endfor %}
 
   </div>
+ <script>
+    fetch('http://servicodados.ibge.gov.br/api/v3/noticias/',  {
+            method: "GET"
+          })
+          .then((res) => res.json())
+          .then((data) => {
+             console.log(data)
+
+             document.querySelector("#TESTE").innerHTML= data.items[0].titulo
+             /*
+             document.querySelector("#TESTE2").innerHTML= data.items[0].introducao*/
+        })
+          .catch((err) => {
+            console.log(err);
+          });
+
+ </script>
+</div>
+
+<div id="TESTE">
+
 
 </div>
 {% endblock %}
