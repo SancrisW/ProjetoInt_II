@@ -1,16 +1,12 @@
 {% extends 'base.html'%}
-
+{% load static %}
 {% block 'titulo'%}
 Home
 
 {% endblock%}
 
 {% block 'body' %}
-<div class="d-grid gap-2 d-md-flex justify-content-md-end">
-  <a class="navbar-brand" href="{% url 'sair' %}">
-  <button class="btn btn-primary me-md-2" type="button">Sair</button>
-  </a>
-</div>
+
 
 <br>
 <br>
@@ -28,8 +24,14 @@ Home
     que estejam fazendo esse trabalho pela primeira vez.
              <br>O site não pretende de forma alguma substituir o conteúdo <br>
             específico já existente no AVA da UNIVESP dessa disciplina</center></h4></a></center>
+    </nav>
   </div>
 
+
+  <div id="TESTE" class="links_Noticia"> 
+   
+
+  </div>
   <br>
   <br> 
   <br>
@@ -60,30 +62,12 @@ Home
       {% endfor %}
 
   </div>
- <script>
-    fetch('http://servicodados.ibge.gov.br/api/v3/noticias/',  {
-            method: "GET"
-          })
-          .then((res) => res.json())
-          .then((data) => {
-             console.log(data)
-
-             document.querySelector("#TESTE").innerHTML= data.items[0].titulo
-             /*
-             document.querySelector("#TESTE2").innerHTML= data.items[0].introducao*/
-        })
-          .catch((err) => {
-            console.log(err);
-          });
-
- </script>
-</div>
-
-
-
-<div id="TESTE">
-
 
 </div>
+
+
+
+
+<script src="{% static 'js/script.js' %}"></script>
 </div>
 {% endblock %}

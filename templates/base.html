@@ -1,18 +1,34 @@
 <!doctype html>
 <html lang="pt-BR">
   <head>
+    {% load static %}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <title>{% block 'titulo'%}{% endblock %}</title>
     {% block 'head' %}{% endblock %}
   </head>
   <body>
-    <nav class="navbar navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">P A I - PORTAL DE APOIO INTEGRADO</a>
+    
+    <nav class="navbar navbar-dark bg-dark Menu">
+      <div class="Logo_Menu">
+        <img src="{% static 'img/logo.png' %}" alt="Logo">
+        <a class="navbar-brand text_Menu" href="#">P A I - PORTAL DE APOIO INTEGRADO</a>
+        <div class="Btn_Sair">
+          <a class="navbar-brand" href="{% url 'home' %}">
+            <button class="btn btn-primary me-md-2" type="button">Home</button>
+          </a>
+          <a class="navbar-brand" href="{% url 'sair' %}">
+            <button class="btn btn-primary me-md-2" type="button">Sair</button>
+          </a>
+        </div>
+      </div>
+
     </nav>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" ></script>
     {% block 'body'%}{% endblock %}
       

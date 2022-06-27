@@ -1,0 +1,66 @@
+.Menu{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.text_Menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2%;
+}
+
+.Logo_Menu{
+    display: flex;
+    width: 100%;
+}
+
+
+.Logo_Menu > img{
+   width: 100px;
+}
+
+.Btn_Sair{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+}
+
+.links_Noticia{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.Noticia_Cont{
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+   
+	
+   
+}
+
+.Noticia_Cont>img{
+    width: 250px;
+    height: 100%; 
+}
+
+.Noticia_Cont>p{
+    display: flex;
+    width: 250px;
+    
+}
+
+
+.Noticia_Cont>a{
+    display: flex;
+    width: 250px;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
