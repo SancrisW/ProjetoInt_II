@@ -13,7 +13,7 @@ class Cursos(models.Model):
 class Aulas(models.Model):
     nome = models.CharField(max_length = 100)
     descricao = models.TextField()
-    aula = models.FileField(upload_to = "aulas")
+    aula =  models.CharField(max_length = 255)
     curso = models.ForeignKey(Cursos, on_delete = models.DO_NOTHING)
 
     def __str__(self) -> str:

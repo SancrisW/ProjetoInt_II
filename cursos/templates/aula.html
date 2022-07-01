@@ -5,12 +5,9 @@
 
 {% block 'titulo'%}
 Aula
-
 {% endblock%}
 
 {% block 'body' %}
-
-
 <div class="container"><!--abre janela para avaliação-->
   
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -28,15 +25,13 @@ Aula
           {% csrf_token %}
 
           <input type="hidden" value="{{aula.id}}" name="aula_id">
-
+        
           <select name="avaliacao" class="form-control">
             <option value="p">Péssimo</option>
             <option value="r">Ruim</option>
             <option value="re" selected>Regular</option>
             <option value="b">Bom</option>
             <option value="o">Ótimo</option>
-
-
           </select>
 
           <br>
@@ -50,9 +45,9 @@ Aula
     </div>
   </div>
 </div>
+
   <br>
   {% if not usuario_avaliou %}
-
     <div class="alert alert-primary" role="alert">
       <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
         CLIQUE AQUI!
