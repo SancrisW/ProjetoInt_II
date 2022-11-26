@@ -80,4 +80,8 @@ def processa_avaliacao(request): #captura avaliação do usuário
     else:
         return redirect('/auth/login/')
 
+    
+
+
+
       

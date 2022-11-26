@@ -9,6 +9,7 @@
     <title>{% block 'titulo'%}{% endblock %}</title>
     {% block 'head' %}{% endblock %}
   </head>
+
   <body>
     
     <nav class="navbar navbar-dark bg-dark Menu">
@@ -30,8 +31,20 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" ></script>
+    
+    
     {% block 'body'%}{% endblock %}
       
-   
+    <script src="https://webreader.naturalreaders.com/nr-webreader.js" defer></script>
+    <script>
+        
+        window.addEventListener("DOMContentLoaded", function() {
+            if (typeof NRWebReader != 'undefined') {
+                window['NRWebReader'] = new NRWebReader({
+                widget_id: "xkpa6t7u8n"  // DO NOT REMOVE. This is your widget ID for your WebReader
+                });
+            }
+        }); 
+    </script>
   </body>
 </html>

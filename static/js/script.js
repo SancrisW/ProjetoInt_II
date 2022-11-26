@@ -19,3 +19,6 @@ fetch('http://servicodados.ibge.gov.br/api/v3/noticias/?qtd=10',  {
   .catch((err) => {
     console.log(err);
   });
+
+  
+
