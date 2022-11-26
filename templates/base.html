@@ -34,17 +34,21 @@
     
     
     {% block 'body'%}{% endblock %}
-      
+
     <script src="https://webreader.naturalreaders.com/nr-webreader.js" defer></script>
     <script>
-        
         window.addEventListener("DOMContentLoaded", function() {
             if (typeof NRWebReader != 'undefined') {
                 window['NRWebReader'] = new NRWebReader({
-                widget_id: "xkpa6t7u8n"  // DO NOT REMOVE. This is your widget ID for your WebReader
+                widget_id: "qtpah8i91f"  // DO NOT REMOVE. This is your widget ID for your WebReader
                 });
+                setTimeout(()=>{
+                document.querySelector("#nr-webreader-sandbox").setAttribute("style", "display: none;")
+        },2000)
             }
         }); 
     </script>
+      
+    
   </body>
 </html>
